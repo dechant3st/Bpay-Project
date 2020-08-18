@@ -1,0 +1,109 @@
+﻿@model LoginViewModel
+
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bpay_Project</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous" />
+    <style>
+        .bg-pic {
+            min-height: 680px;
+        }
+
+        .modal-content {
+            border-color: #0b549d;
+            border-radius: 1rem;
+            border: 2px solid #0b549d;
+        }
+
+        .modal-dialog {
+            width: 360px;
+            margin: auto;
+        }
+
+        .modal {
+            position: initial;
+            padding-bottom: 18px;
+        }
+
+        .is-focused [class^=bmd-label] {
+            color: #0b549d;
+        }
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+
+        .is-focused .form-control {
+            background-image: linear-gradient(0deg,#0b549d 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+        }
+
+        footer {
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .form-text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="bg-pic">
+    <img src="~/images/bpaylogo.png" style="width:auto;height:90px;display: block;margin-left: auto;margin-right: auto;" />
+
+    <div class="modal show" tabindex="-1" role="dialog" aria-labelledby="loginLabel" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="fas fa-user fa-5x" style="margin:auto; color: #0b549d; background: rgba(11, 84, 157, 0.50); width: 92px; height: 92px; border-radius: 50%;padding-left: 10px;"></div>
+                </div>
+                <div class="modal-body">
+                    <form method="post" id="loginForm">
+                        <div class="form-group">
+                            <label asp-for="@Model.EmailAddress" class="bmd-label-floating"></label>
+                            <input asp-for="@Model.EmailAddress" class="form-control" />
+                            <span asp-validation-for="@Model.EmailAddress" class="form-text text-sm-left text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.Password" class="bmd-label-floating"></label>
+                            <input asp-for="@Model.Password" class="form-control" />
+                            <span asp-validation-for="@Model.Password" class="form-text text-sm-left text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <input asp-for="@Model.IsPersist" class="form-check-input" />
+                            <label asp-for="@Model.IsPersist" class="form-check-label"></label>
+                        </div>
+                    </form>
+                    <p class="text-sm-center text-muted pt-2 pb-3">Don't have account? <a asp-action="register" class="btn btn-primary p-0" style="color: #0b549d;">Sign Up</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button form="loginForm" type="submit" class="btn btn-raised btn-primary pl-3 pr-3 mb-4" style="width: 100%;margin-right: 24px; background: #0b549d;border-radius: 5em;">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align:center;">
+            <h6>Powered By <img style="width:100px" src="~/images/Buyani.png" /></h6>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+</body>
+</html>

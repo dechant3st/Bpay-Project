@@ -1,0 +1,42 @@
+﻿
+body {
+    margin: 0 auto;
+    font-family: 'Open sans';
+}
+.bpay-logo-section {
+    text-align: center;
+    padding:15px 0;
+}
+.row{
+    margin:0 !important;
+}
+.bpay-logo
+{
+    width:250px;
+}
+.content-title{
+    color:#0b549d;
+}
+.content-section{
+    padding:20px 0;
+}
+.txtbox
+{
+    border-radius:0 !important;
+    border:1px solid black !important;
+}
+.info-section
+{
+    padding:0 25%;
+}
+@media only screen and (max-width: 600px) {
+    .content-title {
+        font-size:20px;
+    }
+    .bpay-logo {
+        width: 150px;
+    }
+    .info-section {
+        padding: 0 10% !important;
+    }
+}

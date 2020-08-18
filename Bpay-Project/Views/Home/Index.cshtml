@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="~/css/homepage.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<div class="header">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="header-bg1" src="~/images/test.jpg" />
+                <img class="header-bg2" src="~/images/tints.jpg" />
+                <div class="text-section text-center">
+                    <p class="header-p">
+                        Kinapos ka ba?<br />
+                        <img style="width:60px" src="~/images/bpaylogo.png" /> muna!
+                    </p>
+                </div>
+                <div class="reg-button text-center">
+                    <a class="btnreg" asp-controller="account" asp-action="register">REGISTER NOW</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="header-bg2" src="~/images/image.jpg" />
+            </div>
+            <div class="carousel-item">
+                <img class="header-bg2" src="~/images/test1.jpg" />
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="content-section">
+    <div class="rfc-intro">
+        <p class="intro text-center">
+            Maplecrest Financing Corp. introduces BPay,
+            your day-to-day financing partner, exclusive
+            to eligible members of the Lancaster New City community
+        </p>
+    </div>
+    <div class="content-body" style="background-color: #e9e9e9;">
+        <div class="rfc-content" style="padding:15px 0 15px 0">
+            <div class="content-item">
+                <div style="display:inline-block;float:left;padding:0 15px;width:20%">
+                    <div>
+                        <img class="content-img" src="~/images/apply.jpg" />
+                    </div>
+                </div>
+                <div style="display: inline-block;width: 80%">
+                    <h7 class="content-title">APPLY IN 2 EASY AND HASSLE-FREE STEPS</h7><br />
+                    <i class="fa fa-check" style="color:#ef8332"></i><span class="content-p">Register</span><br />
+                    <i class="fa fa-check" style="color:#ef8332"></i><span class="content-p">Submit</span>
+                </div>
+            </div>
+
+            <br />
+            <div class="content-item">
+                <div style="display:inline-block;float:left;padding:0 15px;width:20%">
+                    <div>
+                        <img class="content-img" src="~/images/shop.jpg" />
+                    </div>
+                </div>
+                <div style="display:inline-block;width:80%">
+                    <h7 class="content-title" style="font-size:12px ">SHOP CONVENIENTLY</h7><br />
+                    <p class="content-p">
+                        Gamitin ang BPay sa pagbili sa
+                        TIENDA.buyani.com and enjoy over
+                        300 products available online
+                    </p>
+                </div>
+            </div>
+
+            <br />
+            <div class="content-item">
+                <div style="display:inline-block;float:left;padding:0 15px;width:20%">
+                    <div>
+                        <img class="content-img" src="~/images/pay.jpg" />
+                    </div>
+                </div>
+                <div style="display:inline-block;width:80%">
+                    <h7 class="content-title">SHOP CONVENIENTLY</h7><br />
+                    <p class="content-p">
+                        Hindi mo kailangang maghintay ng sweldo
+                        para makabayad sa mga importanteng
+                        bayarin
+                    </p>
+                </div>
+            </div>
+            <br />
+            <div class="content-item">
+                <div style="display:inline-block;float:left;padding:0 15px;width:20%">
+                    <div>
+                        <img class="content-img" src="~/images/low.jpg" />
+                    </div>
+                </div>
+                <div style="display:inline-block;width:80%">
+                    <h7 class="content-title">LOW RATES</h7><br />
+                    <p class="content-p">
+                        I-take advantage ang mababang monthly
+                        rate sa ginamit na halaga
+                    </p>
+                </div>
+            </div>
+
+            <br />
+            <div class="content-item">
+                <div style="display:inline-block;float:left;padding:0 15px;width:20%">
+                    <div>
+                        <img class="content-img" src="~/images/flex.jpg" />
+                    </div>
+                </div>
+                <div style="display:inline-block;width:80%">
+                    <h7 class="content-title">FLEXIBLE PAYMENT OPTIONS</h7><br />
+                    <p class="content-p">
+                        Maaaring bayaran ang minimum amount
+                        due o ang total amount due based sa
+                        monthly billing statement
+                    </p>
+                </div>
+            </div>
+            <div style="padding-top:5%">
+                <div class="reg-btn" style="text-align:center">
+                    <a class="btnreg" asp-controller="account" asp-action="register">REGISTER NOW</a>
+                </div>
+            </div>
+        </div>
+        <div style="padding:30px 0 30px 0;text-align:center" class="footer">
+            <h5>
+                Powered By <img style="width:150px" src="~/images/Buyani.png" />
+            </h5>
+        </div>
+    </div>
+</div>

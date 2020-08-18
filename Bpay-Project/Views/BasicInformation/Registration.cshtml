@@ -1,0 +1,249 @@
+﻿
+@{
+    ViewData["Title"] = "BpayRegistration";
+    Layout = null;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
+<link href="~/css/registration.css" rel="stylesheet" />
+
+<!-- partial:index.partial.html -->
+<!--PEN HEADER-->
+<!--PEN CONTENT     -->
+<div class="bpay-logo-section bg-white">
+    <img class="bpay-logo" src="~/images/bpaylogo.png" />
+    <div class="text-center logo-section">
+        <h3 class="reg-title">
+            Register for a <img style="width:60px" src="~/images/bpaylogo.png" /> account with MFC
+        </h3>
+    </div>
+</div>
+
+<div class="content">
+    <!--content inner-->
+    <div class="content__inner">
+        <div class="container overflow-hidden">
+            <!--multisteps-form-->
+            <div class="multisteps-form">
+                <!--progress bar-->
+                <div class="row" style="padding-bottom:30px">
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="multisteps-form__progress">
+                            <button class="multisteps-form__progress-btn js-active" type="button"><span class="select-btn">Classification of Eligible LNC Resident</span></button>
+                            <button class="multisteps-form__progress-btn" type="button"><span class="select-btn">Basic Information Details</span></button>
+                            <button class="multisteps-form__progress-btn" type="button"><span class="select-btn">Employment/Business Details</span></button>
+                            <button class="multisteps-form__progress-btn" type="button"><span class="select-btn">Document Submission</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!--form panels-->
+                <div>
+                    <div class="row">
+                        <div class="col-12 col-lg-12 dv-multi-form shadow" style="background-color:#e9e9e9" >
+                            <form class="multisteps-form__form">
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel  p-4 rounded js-active" data-animation="scaleIn">
+                                    <h3 class="multisteps-form__title text-center">Classification of Eligible LNC Resident</h3>
+                                    <div class="multisteps-form__content">
+                                        <br />
+                                        <div class="form-row mt-4">
+                                            <div class="col-12 col-sm-6">
+                                                <p><input id="rdFamilyMember" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdFamilyMember" class="multi-form-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -17px">&nbsp; Homeowner Resident</label></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-row mt-4">
+                                            <div class="col-12 col-sm-6">
+                                                <div>
+                                                    <input id="rdFamilyMember" style="display: block !important;margin-top: -17px" type="radio" /><label for="rdFamilyMember" style="display: block !important;margin-left: 19px;margin-top: -17px" class="multi-form-1 text-secondary">&nbsp; Family Member of the Homeowner Resident</label>
+                                                    <div class="text-right">
+                                                        <span class="text-secondary text-right" style="font-size:x-small">(Relationship with Registered Homeowner)</span>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row" style="padding:0 5%">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="padding-top:5px;padding-left:5px !important">
+                                                            <p><input id="rdParent" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdFamilyMember" class="multi-subform-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -15px">&nbsp; PARENT</label></p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="padding-top:5px;padding-left:5px !important">
+                                                            <p><input id="rdChild" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdFamilyMember" class="multi-subform-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -15px">&nbsp; CHILD</label></p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="padding-top:5px;padding-left:5px !important">
+                                                            <p><input id="rdSibling" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdFamilyMember" class="multi-subform-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -15px">&nbsp; SIBLING</label></p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="padding-top:5px;padding-left:5px !important">
+                                                            <p style="margin-bottom:.3rem">
+                                                                <input id="rdOther" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdFamilyMember" class="multi-subform-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -15px;margin-bottom:0">&nbsp; OTHER (Pls. Specify)</label>
+                                                                <div class="text-right">
+                                                                    <span class="text-secondary text-right" style="font-size:x-small"><input id="txtOther" style="border: 0;  outline: 0;  background: transparent;  border-bottom: 1px solid gray;" type="text" /></span>
+                                                                </div>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-row mt-4">
+                                            <div class="col-12 col-sm-6">
+                                                <p><input id="rdNonHomeowner" type="radio" style="display: block !important;margin-top: -17px" /><label for="rdNonHomeowner" class="multi-form-1 text-secondary" style="display: block !important;margin-left: 19px;margin-top: -17px">&nbsp;Non Homeowner Resident</label></p>
+                                            </div>
+                                        </div>
+                                        <div class="button-row d-flex mt-4" style="float:right">
+                                            <button class="btn btn-next js-btn-next" type="button" title="Next">Save for Later</button>&nbsp;
+                                            <button class="btn btn-next  js-btn-next" type="button" title="Next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12 dv-multi-form">
+                                    <!--single form panel-->
+                                    <div class="multisteps-form__panel p-4 rounded " data-animation="scaleIn">
+                                        <h3 class="multisteps-form__title text-center">Basic Information Details</h3>
+                                        <div class="multisteps-form__content">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">First Name*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Last Name*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Middle Name*</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Suffix (Jr, II, Etc)</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Mobile Number*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Email Address*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Place of Birth*</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Birth Date*</label>
+                                                        <input class="form-control txtbox" type="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Nationality*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Gender</label>
+                                                        <select class="form-control"></select>
+                                                    </div>
+                                                    <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                                                        <label for="" class="control-label">Civil Status*</label>
+                                                        <select class="form-control"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Country</label>
+                                                    <select class="form-control">
+                                                        <option>Philippines</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Province</label>
+                                                    <select class="form-control"></select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">City*</label>
+                                                    <select class="form-control"></select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Barangay*</label>
+                                                    <select class="form-control"></select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">Street*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="control-label">TIN/ SSS / PHILHEALTH / UMID NO.*</label>
+                                                    <input class="form-control txtbox" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="button-row d-flex mt-4" style="float:right">
+                                                <button class="btn btn-next js-btn-prev" type="button" title="Prev">Prev</button>&nbsp;
+                                                <button class="btn btn-next  js-btn-next" type="button" title="Next">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel p-4 rounded" data-animation="scaleIn">
+                                    <h3 class="multisteps-form__title text-center">Employment / Business Details</h3>
+                                    <div class="multisteps-form__content">
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 mt-4">
+                                                <div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Source of Income*</label>
+                                                        <select class="form-control"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Employer / Business Name*</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Company / Business Address*</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Position / Occupation*</label>
+                                                        <input class="form-control txtbox" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="button-row d-flex mt-4" style="float:right">
+                                                    <button class="btn btn-next js-btn-prev" type="button" title="Prev">Prev</button>&nbsp;
+                                                    <button class="btn btn-next  js-btn-next" type="button" title="Next">Next</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                                    <h3 class="multisteps-form__title">Additional Comments</h3>
+                                    <div class="multisteps-form__content">
+                                        <div class="form-row mt-4">
+                                            <textarea class="multisteps-form__textarea form-control" placeholder="Additional Comments and Requirements"></textarea>
+                                        </div>
+                                        <div class="button-row d-flex mt-4">
+                                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                            <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!--end row-->
+                </div>
+                <div style="padding:30px 0 30px 0;text-align:center" class="footer">
+                    <h6>
+                        Powered By <img style="width:100px" src="~/images/Buyani.png" />
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></script>
+<script src="~/js/registration.js"></script>
+

@@ -1,0 +1,389 @@
+﻿body {
+    margin: 0 auto;
+    font-family: 'Open sans';
+}
+
+.mfc-logo {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 250px;
+}
+
+.content-img {
+    width: 90px;
+}
+
+.content-body {
+    padding: 0 5%;
+}
+
+.content-section {
+    width: 100%;
+}
+
+.reg-button {
+    top: 90%;
+    left: 50%;
+}
+
+.reg-btn {
+    left: 50%;
+}
+
+.header-bg1 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-bg2 {
+    display: none;
+}
+
+.text-section {
+    top: 69%;
+    left: 50%;
+    background: rgba(197,197,197, 0.6);
+    width: 100%;
+}
+
+.carousel-indicators {
+    top: 72%;
+}
+
+.text-section, .mfc-logo, .reg-button, .reg-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+}
+
+.content-p {
+    font-size: 14px;
+}
+
+.header-p {
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 0 !important;
+    padding: 5px 0;
+}
+
+.reg-btn {
+    background-color: #0b549d;
+    color: white;
+    padding: 15px 50px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.reg-button {
+    background-color: #0b549d;
+    color: white;
+    padding: 15px 50px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    z-index:100;
+}
+.btnreg:hover {
+    color: white;
+}
+    .content-title {
+    color: #0b549d;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.rfc-content {
+    padding: 15px 0 15px 0;
+}
+
+.btnreg {
+    text-decoration: none;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.rfc-intro {
+    padding: 25px 0 25px 0;
+}
+
+.intro {
+    font-size: 18px;
+}
+
+@media (max-width: 680px) {
+    .text-section, .mfc-logo, .reg-button {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        color: white;
+        font-size: 16px;
+        border: none;
+        text-align: center;
+    }
+
+    .content-body {
+        padding: 0;
+    }
+
+    .content-img {
+        width: 50px;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .carousel .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+    }
+
+    .reg-btn {
+        background-color: #0b549d;
+        color: white;
+        padding: 10px 0;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 150px;
+    }
+
+    .reg-button {
+        background-color: #0b549d;
+        color: white;
+        padding: 10px 0;
+        width: 150px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 24%;
+        left: 50%;
+        background: rgba(197,197,197, 0.6);
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 27%;
+    }
+
+    .reg-button {
+        top: 32%;
+        left: 50%;
+    }
+
+    .header-p {
+        font-size: 12pt;
+        text-shadow: 1px 1px #000000;
+    }
+
+    .btnreg {
+        font-size: 14px !important;
+    }
+
+    .header-bg1 {
+        display: none;
+    }
+
+    .header-bg2 {
+        display: block;
+        height: 560px;
+        width: 100%;
+        max-height: 560px;
+        background-size: cover;
+    }
+
+    .intro {
+        font-size: 16pt !important;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .header-bg2 {
+        height: 380px;
+        max-height: 380px;
+        width: 100%;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 24%;
+        left: 50%;
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 27%;
+    }
+
+    .reg-button {
+        top: 32%;
+        left: 50%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    .header-bg2 {
+        height: 320px;
+        max-height: 320px;
+        width: 100%;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 24%;
+        left: 50%;
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 27%;
+    }
+
+    .reg-button {
+        top: 32%;
+        left: 50%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+    .header-bg2 {
+        height: 300px;
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 24%;
+        left: 50%;
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 27%;
+    }
+
+    .reg-button {
+        top: 32%;
+        left: 50%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 479px) {
+    .header-bg2 {
+        height: 300px;
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 180px;
+        left: 50%;
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 215px;
+    }
+
+    .reg-button {
+        top: 255px;
+        left: 50%;
+    }
+}
+
+@media (max-width: 374px) {
+    .header-bg2 {
+        height: 280px;
+        max-height: 280px;
+        width: 100%;
+    }
+
+    .content-p {
+        font-size: 14px;
+    }
+
+    .mfc-logo {
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        width: 100px;
+    }
+
+    .text-section {
+        top: 170px;
+        left: 50%;
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        top: 205px;
+    }
+
+    .reg-button {
+        top: 245px;
+        left: 50%;
+    }
+}

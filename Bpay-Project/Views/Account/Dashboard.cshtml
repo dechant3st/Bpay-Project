@@ -1,0 +1,157 @@
+﻿@model DashboardViewModel
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Bpay_Project</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+	<style>
+		#sidebar .modal-dialog {
+			position: fixed;
+			left: 0;
+			margin: auto;
+			width: 260px;
+			height: 100vh;
+			-webkit-transform: translate3d(0%, 0, 0);
+			-ms-transform: translate3d(0%, 0, 0);
+			-o-transform: translate3d(0%, 0, 0);
+			transform: translate3d(0%, 0, 0);
+		}
+
+		#sidebar .modal-content {
+			height: 100%;
+			overflow-y: auto;
+			border-radius: 0;
+		}
+
+		#sidebar .modal-content .modal-header {
+			border-bottom: none;
+			height: 120px;
+		}
+
+		.nav-icon {
+			position: absolute;
+			left: 50%;
+			width: auto;
+			height: 68px;
+		}
+
+		.avatar-initials {
+			position: absolute;
+			left: 50%;
+			top: 10%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+
+		.bar {
+			width: 20px;
+			height: 4px;
+			background-color: black;
+			margin: 3px 0;
+		}
+
+		.main {
+			min-height: calc(100vh - 135px);
+			top: 51px;
+			background: #e9e9e9;
+		}
+
+		body {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="sidebar" tabindex="-1" role="dialog" aria-labelledby="sidebarModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="avatar-initials" width="78" height="78" data-name="@Model.FirstName"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer align-content-center">
+						<form method="post" asp-controller="account" asp-action="logout" style="width: 100%;">
+							<button class="btn btn-success btn-lg" style="width: 100%; padding: 6px 0;">Logout</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sticky-top">
+			<nav class="navbar navbar-light bg-white">
+				<button class="btn btn-light bg-white" type="button" data-toggle="modal" data-target="#sidebar">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</button>
+				<img class="nav-icon" src="~/images/bpaylogo.png" />
+			</nav>
+		</div>
+
+
+		<div class="main">
+		</div>
+
+		<footer>
+			<div class="container pt-3 pb-3 text-center">
+				<h6>Powered By <img style="width:100px" src="~/images/Buyani.png" /></h6>
+			</div>
+		</footer>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script>
+		var InitialAvatar = () => {
+			var colors = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
+
+			var avatarElement = $('.avatar-initials'),
+				avatarWidth = avatarElement.attr('width'),
+				avatarHeight = avatarElement.attr('height'),
+
+				name = avatarElement.data('name'),
+				initials = '',
+
+				charIndex = initials.charCodeAt(0) - 65,
+				colorIndex = charIndex % 19,
+				arr = name.split(' ');
+
+
+			$.each(arr, (i, val) => {
+				initials += val.charAt(0).toUpperCase();
+			});
+
+			charIndex = initials.charCodeAt(0) - 65,
+				colorIndex = charIndex % 19;
+
+			avatarElement.css({
+				'background-color': colors[colorIndex],
+				'width': avatarWidth,
+				'height': avatarHeight,
+				'font': avatarWidth / 2 + "px Arial",
+				'color': '#FFF',
+				'textAlign': 'center',
+				'lineHeight': avatarHeight + 'px',
+				'borderRadius': '50%'
+			})
+				.html(initials);
+		};
+
+		InitialAvatar();
+	</script>
+</body>
+</html>

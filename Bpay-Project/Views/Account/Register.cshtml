@@ -1,0 +1,102 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BPay Registration</title>
+    <link href="~/css/basicinfo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="bpay-logo-section bg-white">
+        <img class="bpay-logo" src="~/images/bpaylogo.png" />
+    </div>
+    <div class="content-section" style="background-color:#e9e9e9">
+        <div class="text-center" style="padding:10px 0">
+            <h2 class="content-title">Basic Information Details</h2>
+        </div>
+        <div class="row info-section">
+            <div class="col-md-12">
+                <form method="post" id="regForm">
+                    <div class="form-group">
+                        <label asp-for="@Model.FirstName" class="control-label">First Name*</label>
+                        <input asp-for="@Model.FirstName" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.FirstName" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.LastName" class="control-label">Last Name*</label>
+                        <input asp-for="@Model.LastName" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.LastName" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.MiddleName" class="control-label">Middle Name*</label>
+                        <input asp-for="@Model.MiddleName" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.MiddleName" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                            <label asp-for="@Model.Suffix" class="control-label">Suffix (Jr, II, Etc)</label>
+                            <input asp-for="@Model.Suffix" class="form-control txtbox" />
+                        </div>
+
+                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xs-6 col-6">
+                            <label asp-for="@Model.BirthDate" class="control-label">Birth Date*</label>
+                            <input asp-for="@Model.BirthDate" class="form-control txtbox" />
+                            <span asp-validation-for="@Model.BirthDate" class="form-text text-sm-left text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.PhoneNumber" class="control-label">Mobile Number*</label>
+                        <input asp-for="@Model.PhoneNumber" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.PhoneNumber" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.EmailAddress" class="control-label">Email Address*</label>
+                        <input asp-for="@Model.EmailAddress" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.EmailAddress" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Password" class="control-label">Password*</label>
+                        <input asp-for="@Model.Password" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.Password" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ConfirmPassword" class="control-label">Confirm Password*</label>
+                        <input asp-for="@Model.ConfirmPassword" class="form-control txtbox" />
+                        <span asp-validation-for="@Model.ConfirmPassword" class="form-text text-sm-left text-danger"></span>
+                    </div>
+                    <div class="form-group text-center">
+                        <p><input type="checkbox" value="" />      By Creating this account, I agree to  <a href="#">Buyani Privacy Policy</a></p>
+                    </div>
+                </form>
+                <div style="padding-top:50px">
+                    <div style="display:inline-block;float:left;padding-top:10px">
+                        <a href="#" style="color:#0b549d;">< Back</a>
+                    </div>
+                    <div style="display:inline-block;float:right">
+                        <input form="regForm" type="submit" style="color:white;background-color:#0b549d;border:none;padding:10px 20px" value="Submit" />
+                        <a class="btnreg" asp-controller="basicinformation" asp-action="registration">test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding:30px 0 30px 0;text-align:center" class="footer">
+        <h6>
+            Powered By <img style="width:100px" src="~/images/Buyani.png" />
+        </h6>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
